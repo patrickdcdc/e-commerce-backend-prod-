@@ -9,13 +9,6 @@ const Order = require("./models/Order");
 const authRoutes = require("./middleware/auth");
 const adminRoutes = require("./middleware/requireAdmin");
 
-// Initialize Firebase Admin SDK
-//const serviceAccount = require("C:/VSCODE/NODE JS/E-commerce1-success/e-store-86806-firebase-adminsdk-mfjfh-c53b6195fc.json");
-
-//admin.initializeApp({
-//credential: admin.credential.cert(serviceAccount),
-//});
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -275,3 +268,4 @@ app.post("/api/checkout", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
